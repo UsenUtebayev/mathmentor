@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "mathmentor"
+version = "0.1.0"
+description = ""
+authors = ["Utebayev Ussen <usenutebayev@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+djangorestframework = "^3.14.0"
+gunicorn = "^21.2.0"
+djoser = "^2.2.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
