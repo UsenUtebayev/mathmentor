@@ -54,6 +54,7 @@ class Level(models.Model):
 class Stage(models.Model):
     name = models.CharField(max_length=127, blank=False, null=False)
     levels = models.ManyToManyField(Level)
+    image = models.ImageField()
 
     def __str__(self):
         return self.name
