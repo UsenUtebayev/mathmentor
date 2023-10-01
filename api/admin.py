@@ -4,7 +4,6 @@ from api.models import *
 
 
 # Register your models here.
-@admin.register(TypeOfQuestion)
 class TypeOfQuestionAdmin(admin.ModelAdmin):
     pass
 
@@ -24,16 +23,8 @@ class QuestionAdmin(admin.ModelAdmin):
     pass
 
 
-@admin.register(Difficult)
-class DifficultAdmin(admin.ModelAdmin):
-    pass
-
-
 @admin.register(Level)
 class LevelAdmin(admin.ModelAdmin):
     pass
 
 
-@admin.register(Stage)
-class StageAdmin(admin.ModelAdmin):
-    pass
