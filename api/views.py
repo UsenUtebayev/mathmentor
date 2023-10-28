@@ -7,6 +7,7 @@ from api.serializer import *
 class WrongAnswerViewSet(viewsets.ModelViewSet):
     queryset = WrongAnswer.objects.all()
     serializer_class = WrongAnswerSerializer
+    filterset_fields = ['question']
 
 
 class RightAnswerViewSet(viewsets.ModelViewSet):
