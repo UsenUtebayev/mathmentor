@@ -25,5 +25,3 @@ class LevelSerializer(ModelSerializer):
     class Meta:
         model = Level
         fields = "__all__"
-
-
