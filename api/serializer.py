@@ -1,5 +1,6 @@
 from rest_framework.serializers import ModelSerializer
 
+from api.filters import QuestionFilter
 from api.models import *
 
 
@@ -19,6 +20,8 @@ class QuestionSerializer(ModelSerializer):
     class Meta:
         model = Question
         fields = "__all__"
+
+    filterset_class = QuestionFilter
 
 
 class LevelSerializer(ModelSerializer):

@@ -1,6 +1,6 @@
 import random
 
-from rest_framework import viewsets
+from rest_framework import viewsets, generics
 from rest_framework.decorators import action
 from rest_framework.response import Response
 
@@ -47,3 +47,20 @@ class QuestionViewSet(viewsets.ModelViewSet):
 class LevelViewSet(viewsets.ModelViewSet):
     queryset = Level.objects.all()
     serializer_class = LevelSerializer
+
+
+class FilterQuestionsByLevel(generics.ListAPIView):
+    serializer_class = QuestionSerializer
+
+    def get_queryset(self):
+        level_id = self.kwargs['level_id']
+        return Question.objects.filter(level__id=level_id)
+
+
+class GetLevelByQuestion(generics.RetrieveAPIView):
+    queryset = Level.objects.all()
+    serializer_class = LevelSerializer
+
+    def get_object(self):
+        question_id = self.kwargs['question_id']
+        return Level.objects.filter(questions__id=question_id).first()
