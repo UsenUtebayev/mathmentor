@@ -145,3 +145,4 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
     "http://195.49.215.125"
 ]
+SECURE_SSL_REDIRECT = True
