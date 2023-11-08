@@ -24,9 +24,6 @@ from config import settings
 
 urlpatterns = [path('admin/', admin.site.urls),
                path('api/v1/', include('api.urls')),
-               re_path(r'^auth/', include('djoser.urls')),
-               re_path(r'^auth/', include('djoser.urls.authtoken')),
-
                ]
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
