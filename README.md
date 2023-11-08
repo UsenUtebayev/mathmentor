@@ -1,5 +1,5 @@
 # mathmentor
 
 ``` bash 
-gunicorn config.wsgi
+ python -m uvicorn config.asgi:application
 ```
