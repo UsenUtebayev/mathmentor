@@ -45,6 +45,8 @@ INSTALLED_APPS = [
     'api',
 ]
 
+CSRF_HEADER_NAME = "HTTP_X_CSRFTOKEN"
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
